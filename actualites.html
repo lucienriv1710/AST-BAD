@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AST Badminton – Châteauneuf-en-Thymerais</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,800&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <a href="#" class="logo">
+      <span class="logo-text">
+        <strong>AST</strong>
+        <em>BADMINTON</em>
+        <small>CHÂTEAUNEUF-EN-THYMERAIS</small>
+      </span>
+    </a>
+    <nav class="nav">
+      <a href="/index.html" >Accueil</a>
+      <li class="dropdown">
+        <a href="./leClub.html" class="dropbtn">Le club ▾</a>
+        <ul class="dropdown-content">
+          <li><a href="/historique.html">Historique</a></li>
+          <li><a href="/equipe.html">L'équipe</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="cr-reguliers.html" class="dropbtn">Creaneaux & Tarifs ▾</a>
+        <ul class="dropdown-content">
+          <li><a href="/cr-reguliers.html">Créneaux réguliers</a></li>
+          <li><a href="/cr-specifiques.html">Créneaux spécifiques</a></li>
+          <li><a href="/tarifs.html">Tarifs</a></li>
+        </ul>
+      </li>
+      <a href="/competition.html">Compétition ▾</a>
+      <a href="/actualites.html" class="active">Actualités</a>
+      <a href="/nousRejoindre.html">Nous rejoindre</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+    <div class="socials">
+      <a href="#" aria-label="Facebook">f</a>
+      <a href="#" aria-label="Instagram"></a>
+    </div>
+  </header>
+
+   <!-- ===== BANDEAU DE PAGE ===== -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="index.html">Accueil</a> › Actualités</p>
+      <h1>ACTUALITÉS</h1>
+      <p class="page-hero-script">Toute la vie du club, semaine après semaine</p>
+    </div>
+  </section>
+ 
+  <!-- ===== À LA UNE ===== -->
+  <section class="featured container">
+    <article class="featured-card">
+      <img src="images/news1.jpg" alt="">
+      <div class="featured-body">
+        <span class="tag">VIE DU CLUB</span>
+        <h2>Rentrée 2026-2027 : les créneaux sont en ligne !</h2>
+        <time datetime="2026-08-28">28 août 2026</time>
+        <p>[À compléter] Résumé de l'article en deux ou trois phrases : reprise le 7 septembre, nouveaux horaires, nouveautés de la saison.</p>
+        <a href="cr-reguliers.html" class="btn btn-primary">LIRE L'ARTICLE &nbsp;→</a>
+      </div>
+    </article>
+  </section>
+ 
+  <!-- ===== FILTRES + LISTE ===== -->
+  <section class="news-page container">
+    <div class="filters" role="group" aria-label="Filtrer les actualités par catégorie">
+      <button type="button" class="filter is-active" data-filter="all">Toutes</button>
+      <button type="button" class="filter" data-filter="vie-du-club">Vie du club</button>
+      <button type="button" class="filter" data-filter="competition">Compétition</button>
+      <button type="button" class="filter" data-filter="tournoi">Tournoi</button>
+      <button type="button" class="filter" data-filter="jeunes">Jeunes</button>
+    </div>
+ 
+    <div class="news-grid news-grid-3" id="news-list">
+      <article class="card" data-category="competition">
+        <img src="images/news2.jpg" alt="">
+        <div class="card-body">
+          <span class="tag">COMPÉTITION</span>
+          <h4>Résultats du tournoi de Châteauneuf-en-Thymerais</h4>
+          <p class="card-text">[À compléter] Les podiums et les belles performances de nos adhérents.</p>
+          <time datetime="2026-06-15">15 juin 2026</time>
+        </div>
+      </article>
+      <article class="card" data-category="vie-du-club">
+        <img src="images/news3.jpg" alt="">
+        <div class="card-body">
+          <span class="tag">VIE DU CLUB</span>
+          <h4>Retour sur notre soirée interne</h4>
+          <p class="card-text">[À compléter] Une soirée conviviale, des matchs en doubles et beaucoup de bonne humeur.</p>
+          <time datetime="2026-06-10">10 juin 2026</time>
+        </div>
+      </article>
+      <article class="card" data-category="tournoi">
+        <img src="images/news4.jpg" alt="">
+        <div class="card-body">
+          <span class="tag">TOURNOI</span>
+          <h4>Tournoi de double le 12 octobre 2026</h4>
+          <p class="card-text">[À compléter] Inscriptions ouvertes, tableaux et informations pratiques.</p>
+          <time datetime="2026-06-02">02 juin 2026</time>
+        </div>
+      </article>
+      <article class="card" data-category="jeunes">
+        <img src="images/news5.jpg" alt="">
+        <div class="card-body">
+          <span class="tag">JEUNES</span>
+          <h4>L'école de badminton ouvre ses inscriptions</h4>
+          <p class="card-text">[À compléter] Les enfants de 6 à 12 ans peuvent rejoindre les séances du mercredi.</p>
+          <time datetime="2026-05-20">20 mai 2026</time>
+        </div>
+      </article>
+      <article class="card" data-category="competition">
+        <img src="images/news6.jpg" alt="">
+        <div class="card-body">
+          <span class="tag">COMPÉTITION</span>
+          <h4>Bilan de la saison d'interclubs</h4>
+          <p class="card-text">[À compléter] Les résultats de nos équipes engagées dans le championnat départemental.</p>
+          <time datetime="2026-05-05">05 mai 2026</time>
+        </div>
+      </article>
+      <article class="card" data-category="vie-du-club">
+        <img src="images/news7.jpg" alt="">
+        <div class="card-body">
+          <span class="tag">VIE DU CLUB</span>
+          <h4>Assemblée générale du club</h4>
+          <p class="card-text">[À compléter] Compte rendu de l'assemblée et présentation du nouveau bureau.</p>
+          <time datetime="2026-04-18">18 avril 2026</time>
+        </div>
+      </article>
+    </div>
+ 
+    <p class="no-result" id="no-result" hidden>Aucune actualité dans cette catégorie pour le moment.</p>
+ 
+    <nav class="pagination" aria-label="Pagination des actualités">
+      <a href="#" class="page is-current" aria-current="page">1</a>
+      <a href="#" class="page">2</a>
+      <a href="#" class="page">3</a>
+      <a href="#" class="page page-next">Suivant →</a>
+    </nav>
+  </section>
+ 
+  <!-- ===== APPEL À L'ACTION ===== -->
+  <section class="cta">
+    <h2>Envie de nous rejoindre ?</h2>
+    <p>Que vous soyez débutant, confirmé ou simplement curieux,<br>venez essayer le badminton avec nous !</p>
+    <a href="nousRejoindre.html" class="btn btn-white">JE M'INSCRIS / JE FAIS UN ESSAI &nbsp;→</a>
+  </section>
+ 
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <a href="index.html" class="logo logo-light">
+        <span class="logo-text"><strong>AST</strong><em>BADMINTON</em><small>CHÂTEAUNEUF-EN-THYMERAIS</small></span>
+      </a>
+      <div>
+        <h5>Nous contacter</h5>
+        <p>📍 Gymnase de Châteauneuf-en-Thymerais<br>&nbsp;&nbsp;&nbsp;&nbsp;Rue de la Mairie - 28170 Châteauneuf-en-Thymerais</p>
+        <p>✉ ast.badminton28@gmail.com</p>
+      </div>
+      <div>
+        <h5>Suivez-nous</h5>
+        <div class="socials socials-light"><a href="#">f</a><a href="#">◎</a></div>
+      </div>
+      <div class="partners">
+        <h5>Nos partenaires</h5>
+        <strong>FFBaD</strong>
+      </div>
+    </div>
+    <div class="legal">
+      © 2026 AST Badminton Châteauneuf-en-Thymerais &nbsp;|&nbsp; <a href="#">Mentions légales</a> &nbsp;|&nbsp; <a href="#">Politique de confidentialité</a>
+    </div>
+  </footer>
+ 
+  <!-- ===== FILTRE DES ACTUALITÉS ===== -->
+  <script>
+    (function () {
+      var buttons = document.querySelectorAll('.filter');
+      var cards = document.querySelectorAll('#news-list .card');
+      var empty = document.getElementById('no-result');
+ 
+      buttons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var f = btn.getAttribute('data-filter');
+          var visible = 0;
+ 
+          buttons.forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+ 
+          cards.forEach(function (card) {
+            var show = f === 'all' || card.getAttribute('data-category') === f;
+            card.hidden = !show;
+            if (show) visible++;
+          });
+          empty.hidden = visible !== 0;
+        });
+      });
+    })();
+  </script>
+ 
+</body>
+</html>
+ 
