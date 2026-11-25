@@ -305,7 +305,10 @@ img { display: block; max-width: 100%; }
   box-shadow: 0 2px 8px rgba(10,42,94,.12);
 }
 .member img {
-  width: 100%; height: 190px; object-fit: cover;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center 20%;
   background: linear-gradient(135deg, #2e7cc9, #7fc4f0);
 }
 .member-body { padding: 12px 14px 16px; }

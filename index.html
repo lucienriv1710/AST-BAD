@@ -84,44 +84,52 @@
       </figure>
 
       <aside class="events">
-        <h2 class="events-title">PROCHAINS ÉVÉNEMENTS</h2>
-        <article class="event">
-          <div class="date"><b>19</b>NOV</div>
-          <div>
-            <h4>Beaujolais</h4>
-            <p>Soirée beaujolais à l'AST BAD,<br />à ne pas manquer !</p>
-          </div>
-        </article>
-        <article class="event">
-          <div class="date"><b>05</b>DEC</div>
-          <div>
-            <h4>Téléthon</h4>
-            <p>Soirée caritative et sportive<br />On vous attend nombreux.</p>
-          </div>
-        </article>
-        <article class="event">
-          <div class="date"><b>23</b>JAN</div>
-          <div>
-            <h4>Tournoi Galette des rois</h4>
-            <p>Venez vous régaler<br />et tenter de repartir avec la fève</p>
-          </div>
-        </article>
-        <article class="event">
-          <div class="date"><b>12</b>JUIN</div>
-          <div>
-            <h4>Tournoi de Châteauneuf</h4>
-            <p>Tournoi a domicile<br />à ne surtout pas manquer</p>
-          </div>
-        </article>
-        <article class="event">
-          <div class="date"><b>13</b>JUIN</div>
-          <div>
-            <h4>Tournoi de Châteauneuf</h4>
-            <p>Tournoi a domicile<br />à ne surtout pas manquer</p>
-          </div>
-        </article>
-        <a href="#" class="events-link">Voir tout le calendrier →</a>
-      </aside>
+  <h2 class="events-title">PROCHAINS ÉVÉNEMENTS</h2>
+
+  <article class="event" data-date="2026-11-19">
+    <div class="date"><b>19</b>NOV</div>
+    <div>
+      <h4>Beaujolais</h4>
+      <p>Soirée beaujolais à l'AST BAD,<br />à ne pas manquer !</p>
+    </div>
+  </article>
+
+  <article class="event" data-date="2026-12-05">
+    <div class="date"><b>05</b>DEC</div>
+    <div>
+      <h4>Téléthon</h4>
+      <p>Soirée caritative et sportive<br />On vous attend nombreux.</p>
+    </div>
+  </article>
+
+  <article class="event" data-date="2027-01-23">
+    <div class="date"><b>23</b>JAN</div>
+    <div>
+      <h4>Tournoi Galette des rois</h4>
+      <p>Venez vous régaler<br />et tenter de repartir avec la fève</p>
+    </div>
+  </article>
+
+  <article class="event" data-date="2027-06-12">
+    <div class="date"><b>12</b>JUIN</div>
+    <div>
+      <h4>Tournoi de Châteauneuf</h4>
+      <p>Tournoi à domicile<br />à ne surtout pas manquer</p>
+    </div>
+  </article>
+
+  <article class="event" data-date="2027-06-13">
+    <div class="date"><b>13</b>JUIN</div>
+    <div>
+      <h4>Tournoi de Châteauneuf</h4>
+      <p>Tournoi à domicile<br />à ne surtout pas manquer</p>
+    </div>
+  </article>
+
+  <p class="no-events" hidden>Aucun événement à venir pour le moment.</p>
+
+  <a href="#" class="events-link">Voir tout le calendrier →</a>
+</aside>
     </section>
 
     <!-- ===== BANDEAU ATOUTS ===== -->
@@ -226,5 +234,34 @@
         <a href="#">Politique de confidentialité</a>
       </div>
     </footer>
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const now = new Date();
+    // On compare au début de la journée actuelle (minuit) pour garder l'événement affiché tout le jour J
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+    const eventsContainer = document.querySelector(".events");
+    if (!eventsContainer) return;
+
+    const events = eventsContainer.querySelectorAll(".event[data-date]");
+    let remainingCount = 0;
+
+    events.forEach((eventEl) => {
+      const [year, month, day] = eventEl.dataset.date.split("-").map(Number);
+      const eventDate = new Date(year, month - 1, day);
+
+      if (eventDate < today) {
+        eventEl.remove();
+      } else {
+        remainingCount++;
+      }
+    });
+
+    const emptyMsg = eventsContainer.querySelector(".no-events");
+    if (emptyMsg && remainingCount === 0) {
+      emptyMsg.hidden = false;
+    }
+  });
+</script>
   </body>
 </html>
