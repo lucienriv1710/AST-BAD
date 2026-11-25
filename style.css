@@ -364,6 +364,32 @@ img { display: block; max-width: 100%; }
 .info-card p { font-size: .76rem; color: #4a5a7a; }
 .info-links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
 
+/* ===== SPONSORS ===== */
+.sponsors { padding: 40px 0 48px; }
+.sponsor-grid {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px; margin-top: 24px;
+}
+.sponsor-card {
+  overflow: hidden; background: #fff; border: 1px solid #dbe6f5;
+  border-radius: 10px; box-shadow: 0 2px 8px rgba(10,42,94,.1);
+  transition: transform .15s, box-shadow .15s;
+}
+.sponsor-card:hover {
+  transform: translateY(-3px); box-shadow: 0 6px 16px rgba(10,42,94,.16);
+}
+.sponsor-link {
+  display: flex; height: 100%; min-height: 190px; flex-direction: column;
+  align-items: center; justify-content: center; padding: 18px; text-align: center;
+}
+.sponsor-logo {
+  display: block; width: 100%; height: 88px; object-fit: contain;
+  margin-bottom: 14px; border-radius: 6px; background: var(--light); padding: 10px;
+}
+.sponsor-card h3 { color: var(--navy); font-size: .9rem; margin-bottom: 8px; }
+.sponsor-visit { color: var(--blue); font-size: .72rem; font-weight: 700; }
+.sponsor-link:hover .sponsor-visit { color: var(--blue-bright); text-decoration: underline; }
+
 /* ===== CRÉNEAUX SPÉCIFIQUES ===== */
 .special { padding: 40px 0; }
 .special-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
@@ -413,9 +439,12 @@ img { display: block; max-width: 100%; }
 @media (max-width: 1000px) {
   .info-grid, .price-grid { grid-template-columns: repeat(2, 1fr); }
   .special-grid { grid-template-columns: repeat(2, 1fr); }
+  .sponsor-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 600px) {
   .info-grid, .price-grid, .special-grid { grid-template-columns: 1fr; }
+  .sponsor-grid { gap: 12px; }
+  .sponsor-link { min-height: 170px; padding: 14px; }
 }
 
 /* =====================================================
